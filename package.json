@@ -1,0 +1,35 @@
+{
+  "name": "flutter_finder_usercentric",
+  "version": "1.0.0",
+  "description": "Flutter usercentric finder provides flutter finder based on usercentric approach and ready to use during test",
+  "main": "index.js",
+  "directories": {
+    "example": "example",
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nobelization/flutter_finder_usercentric.git"
+  },
+  "keywords": [
+    "flutter",
+    "e2e"
+  ],
+  "author": "Louis Fredice NJAKO MOLOM (https://github.com/luifr10)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nobelization/flutter_finder_usercentric/issues"
+  },
+  "homepage": "https://github.com/nobelization/flutter_finder_usercentric#readme",
+  "devDependencies": {
+    "@semantic-release/commit-analyzer": "^11.1.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/release-notes-generator": "^12.1.0",
+    "semantic-release": "^23.0.2",
+    "semantic-release-replace-plugin": "^1.2.7"
+  }
+}
