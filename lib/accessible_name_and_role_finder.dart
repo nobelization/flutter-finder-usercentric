@@ -1,32 +1,31 @@
 part of 'finder.dart';
 
 /// Find widget by accessible role and accessible name
-Finder finderByAccessibleRoleAndName(WidgetTester tester, AccessibleRole accessibleRole, String accessibleName) {
+Finder finderByAccessibleRoleAndName(
+    WidgetTester tester, AccessibleRole accessibleRole, String accessibleName) {
   return find.or(
       find.ancestor(
           of: find.byAccessibleName(accessibleName),
-          matching: find.byWidgetPredicate((widget) => widget is Semantics && doesWidgetHaveAccessibleRole(tester, widget, accessibleRole)
-          ),
-          matchRoot: true
-      ),
+          matching: find.byWidgetPredicate((widget) =>
+              widget is Semantics &&
+              doesWidgetHaveAccessibleRole(tester, widget, accessibleRole)),
+          matchRoot: true),
       find.ancestor(
-          of: find.byWidgetPredicate((widget) => widget is Semantics
-              && doesWidgetHaveAccessibleRole(tester, widget, accessibleRole)
-          ),
+          of: find.byWidgetPredicate((widget) =>
+              widget is Semantics &&
+              doesWidgetHaveAccessibleRole(tester, widget, accessibleRole)),
           matching: find.or(
-            find.byTooltip(accessibleName),
-            find.byAccessibleName(accessibleName),
-              "find by tootip or accessible name '$accessibleName'"
-          ),
-          matchRoot: true
-      ),
-      "find by role '$accessibleRole' and accessible name '$accessibleName'"
-  );
+              find.byTooltip(accessibleName),
+              find.byAccessibleName(accessibleName),
+              "find by tootip or accessible name '$accessibleName'"),
+          matchRoot: true),
+      "find by role '$accessibleRole' and accessible name '$accessibleName'");
 }
 
 /// Returns True if input widget have the specified semantic role, else False
-bool doesWidgetHaveAccessibleRole(WidgetTester tester, Semantics widget, AccessibleRole accessibleRole) {
-  switch(accessibleRole) {
+bool doesWidgetHaveAccessibleRole(
+    WidgetTester tester, Semantics widget, AccessibleRole accessibleRole) {
+  switch (accessibleRole) {
     case AccessibleRole.button:
       return widget.properties.button == true;
     case AccessibleRole.header:
