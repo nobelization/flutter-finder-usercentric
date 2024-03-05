@@ -1,6 +1,6 @@
 name: flutter_finder_usercentric
 description: "Flutter usercentric finder provides flutter finder based on usercentric approach and ready to use during test"
-version: 0.0.1-beta.1
+version: 1.0.0-beta.1
 homepage: https://orange-opensource.github.io/uuv/
 repository: https://github.com/nobelization/flutter_finder_usercentric.git
 
